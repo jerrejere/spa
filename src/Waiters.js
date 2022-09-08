@@ -1,46 +1,37 @@
-// import React from 'react'
-// import Doc from './Doc'
-// // import useFetchData from '../hooks/fetchData'
-// // import useFetchCustomer from '../hooks/useFetchCustomer'
-// import Customer from './Customer'
-
-// function Waiters() {
-//   const [doc, setDoc, url] = useFetchData()
-//   const [pat, setPat] = useFetchPatient()
-
-//   return (
-//     <div>
-//       <h3>Our waiters:</h3>
-//         <ol>
-//             {!doc ? "Loading..." : doc?.map((doctor)=>{
-//               return (
-//               <li key={doctor?.id}>
-//                 <Doc doctor={doctor}/>
-//               </li>
-//               )
-//             })}
-//         </ol>
-//         <h3> Customer being served:</h3>
-//         <ol>
-//             {!pat ? "Loading..." : pat?.map((patient)=>{
-//               return (
-//               <li key={patient?.id}>
-//                 <Customer patt={patient}/>
-//               </li>
-//               )
-//             })}
-//         </ol>
-//     </div>
-//   )
-// }
-
-// export default Waiters;
 import React from 'react'
+import Waiter from './Waiter'
+import useKijazi from './Mtambo/kijazi'
+import useKijaziClient from './Mtambo/KijaziClient'
+import Customer from './Customer'
 
-const Waiters = () => {
+function Waiters() {
+  const [server, setServer, url] = useKijazi()
+  const [cus, setCus] = useKijaziClient()
+
   return (
-    <div>Waiters</div>
+    <div>
+      <h3>Our spa attendants:</h3>
+        <ol>
+            {!server ? "Loading..." : server?.map((waiter)=>{
+              return (
+              <li key={waiter?.id}>
+                <Server waiter={waiter}/>
+              </li>
+              )
+            })}
+        </ol>
+        <h3>Current customer being served:</h3>
+        <ol>
+            {!cus ? "Loading..." : cus?.map((Customer)=>{
+              return (
+              <li key={customer?.id}>
+                <Customer patt={customer}/>
+              </li>
+              )
+            })}
+        </ol>
+    </div>
   )
 }
 
-export default Waiters
+export default Waiters;

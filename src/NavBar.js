@@ -9,7 +9,7 @@ function NavBar(){
             <div className="navbar">
                 
                 <NavLink to='/'>Home</NavLink>                
-               <NavLink to= '/waiters'>Waiters</NavLink>
+               <NavLink to= '/waiters'>Busy Centre</NavLink>
                <NavLink to= '/form'>Book here</NavLink>
                <NavLink to= '/about'>About Us</NavLink>
                 <NavLink to= '/contactUs'>Contact Us</NavLink>

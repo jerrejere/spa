@@ -1,10 +1,10 @@
 import React from 'react'
-import useFetchData from '../hooks/fetchData'
+import useKijazi from './Mtambo/kijazi'
 
-function Waiter({ waiter}) {
+function Waiter({ server}) {
   const [waiter, setWaiter] = useFetchData()
-  const deleteWaiter = ()=>{
-    fetch(`http://localhost:9292/doctors/${doctor?.id}`, {
+  const deleteDoc = ()=>{
+    fetch(`http://localhost:9292/doctors/${waiter.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type":"application/json"
@@ -17,7 +17,7 @@ function Waiter({ waiter}) {
     fetch("?????????????????")
       .then(res => res.json())
       .then(data => {
-        setDoc(data)
+        setServer(data)
         console.log(data)
       })
       .catch(err => console.log(err))
@@ -30,4 +30,4 @@ function Waiter({ waiter}) {
   )
 }
 
-export default Doc
+export default Waiter

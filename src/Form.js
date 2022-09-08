@@ -5,15 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Form() {
     const [ firstName, setFirstName ] = useState('')
     const [ lastName, setLastName] = useState('')
-    const [ email, setEmail] = useState('')
+    
     const [ address, setAddress] = useState('')
     const [ telephone, setTelephone ] = useState('')
     const [ town, setTown ] = useState('')
-    const [ ailment, setAilment] = useState('')
+   
 
     function handleSubmit(e){
       e.preventDefault()
-      fetch("???????????????????", {
+      fetch("http://localhost:9292/customer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -21,10 +21,9 @@ function Form() {
         body: JSON.stringify({
           first_name: firstName,
           last_name: lastName,
-          email: email,
-          phone: telephone,
+                    phone: telephone,
           town: town,
-          ailment_type: ailment
+        
         })
       })
       .then(res=> res.json())
@@ -32,12 +31,10 @@ function Form() {
         console.log(data)
         setFirstName('')
         setLastName('')
-        setEmail('')
-        setAddress('')
+              setAddress('')
         setTelephone('')
         setTown('')
-        setAilment('')
-      })
+              })
       .catch(err => err.message)
 
       document.querySelector('form').reset()
@@ -65,22 +62,7 @@ function Form() {
               placeholder='Last Name'
               value={ lastName}
               onChange={(e) => setLastName(e.target.value)}
-            ></input>
-            <br />
-            <select>   
-              <option value='Female'> Female</option>
-              <option value='Male'>Male</option>
-              <option value='Both'>Transgender</option>
-            </select>
-            <br />
-            <input
-              type='text'
-              required
-              className='field'
-              placeholder='Email'
-              value={ email }
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
+            ></input>              
             <input
                type='text'
                value={ address }
@@ -92,7 +74,7 @@ function Form() {
                type='text'
                required
                className='field'
-               placeholder='Telephone'
+               placeholder='phone number'
                value={ telephone}
                onChange={(e) => setTelephone(e.target.value)}
            ></input>
@@ -104,26 +86,17 @@ function Form() {
                value={ town }
                onChange={(e) => setTown(e.target.value)}
            ></input>
-           <input
-               type='text'
-               required
-               className='field'
-               placeholder='Ailment Name'
-               value={ ailment }
-               onChange={(e) => setAilment(e.target.value)}
-           ></input>
-           <label className='name'>Ailment type:</label>
-           <select>
-              <option value='Severe'> Severe</option>
-              <option value='Mild'>Mild</option>
-           </select>
+          
            <br />
-           <label className='name'>Select Doctor:</label>
+           <label className='name'>Select attendant you want to be attained by:</label>
             <select>
-              <option value='waiter'>Me Yu</option>
-              <option value='waiter'>Johny Sins</option>
+              <option value='nani'>Male</option>
+              <option value='nani'>Female</option>
+              <option value='nani'>Transgender</option>
+              <option value='nani'>Gay</option>
+              <option value='nani'>Lesbian</option>
            </select>
-          <textarea placeholder="Anymore feedback" className="field"></textarea>
+          <textarea placeholder="Specified time and date" className="field"></textarea>
           <button className="btn2">Send</button>
           </form>
         </div>

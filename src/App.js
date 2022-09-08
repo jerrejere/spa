@@ -6,6 +6,7 @@ import  Waiters from './Waiters';
 import Form from './Form';
 import NavBar from './NavBar';
 import Contact from './Contact';
+import "./App.css"
 
 
 

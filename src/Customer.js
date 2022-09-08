@@ -1,9 +1,9 @@
 import React from 'react'
-import useFetchPatient from '../hooks/fetchPatient'
+import useKijaziClient from './Mtambo/KijaziClient'
 
-function Patient({ patt }) {
-  const [pat, setPat] = useFetchPatient()
-  const deletePat = ()=>{
+function Customer({ patt }) {
+  const [cus, setCus] = useKijaziClient()
+  const deletecus = ()=>{
     fetch(`http://localhost:9292/patients/${patt?.id}`, {
       method: "DELETE",
       headers: {
@@ -30,4 +30,4 @@ function Patient({ patt }) {
   )
 }
 
-export default Patient
+export default Customer
