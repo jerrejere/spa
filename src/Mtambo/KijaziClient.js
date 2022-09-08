@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 function useKijaziClient(){
-    const [cus, setCus] = useState('')
+    const [pat, setPat] = useState('')
     const url = ""
     useEffect(()=>{
         fetch(url)
@@ -12,7 +12,7 @@ function useKijaziClient(){
         })
         .catch(err => console.log(err))
       }, [])
-    return [cus, setCus, url]
+    return [pat, setPat, url]
 }
 
 export default useKijaziClient
