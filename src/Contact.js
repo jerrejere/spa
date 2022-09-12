@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Card from 'react-bootstrap/Card';
 const Contact = () => {
   return (
-	<div>
+	<div className='mastingo'>
+		<Card>
 		<h3>How To Contact Us </h3>
 		<h5>You can easily contact Us through :
 			<li>
@@ -12,7 +13,9 @@ const Contact = () => {
 			</li>
 We are willing to give you the best service for you and at our place the customer is always right. Choose wisely
 		</h5>
+		</Card>
 	</div>
+
   )
 }
 
