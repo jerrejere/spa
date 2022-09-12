@@ -12,10 +12,12 @@ The link is below
 
 https://spa254.herokuapp.com/spaAttendant
 
+ How it works
+
+When a customeer books a session  he or she books on the area where its located Book here. When they are done there names apppear in the busy centre showing that there session is coming.
+
+
 Thank you
-
-
-
 
 
 

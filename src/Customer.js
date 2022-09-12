@@ -42,11 +42,3 @@ export default Customer
 
 
 
-{/* <Card.Body>
-<Card.Title>Name:   {patt?.first_name}</Card.Title>
-<Card.Text>Location:    {patt?.last_name}</Card.Text>
-<Card.Text>Lead Mechanic:   {patt?.service_type || patt?.service_name}</Card.Text>
-<Card.Text> Garage certification number:    {garage.certification_number}</Card.Text>
-</Card.Body>
-<Button onClick={() => {
-      deleteGarage(garage.id) }}>Delete</Button> */}
