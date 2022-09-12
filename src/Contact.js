@@ -1,23 +1,19 @@
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
 
-
-function ContactUs(){
-    return(
-        <div className="uncle">
-		<div className="auntie">
-			<div className="hallo"></div>
-			<div className="jerry">
-				<h2>Contact Us</h2>
-				<input type="text" className="mambo" placeholder="Your Name" />
-				<input type="text" className="mambo" placeholder="Your Email" />
-				<input type="text" className="mambo" placeholder="Phone" />
-				<textarea placeholder="Message" className="poa"></textarea>
-				<button className="lolo">Send</button>
-			</div>
-		</div>
+const Contact = () => {
+  return (
+	<div>
+		<h3>How To Contact Us </h3>
+		<h5>You can easily contact Us through :
+			<li>
+				<ol>whatsapp : 0707629420</ol>
+				<ol>email : sparaha@gmail.com</ol>
+				<ol>twitter: @sparaha</ol>
+			</li>
+We are willing to give you the best service for you and at our place the customer is always right. Choose wisely
+		</h5>
 	</div>
-    )
+  )
 }
 
-export default ContactUs;
+export default Contact

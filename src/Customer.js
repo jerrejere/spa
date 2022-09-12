@@ -1,10 +1,12 @@
 import React from 'react'
-import useKijaziClient from './Mtambo/KijaziClient'
+import useKijaziClient from './KijaziClient'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
 
 function Customer({ patt }) {
-  const [cus, setCus] = useKijaziClient()
-  const deletecus = ()=>{
-    fetch(`http://localhost:9292/patients/${patt?.id}`, {
+  const [setPat] = useKijaziClient()
+  const deletePat = ()=>{
+    fetch(`http://localhost:9292/customers/${patt?.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type":"application/json"
@@ -14,7 +16,7 @@ function Customer({ patt }) {
     .then(data => console.log(data))
     .catch(err=>console.log(err))
 
-    fetch("http://localhost:9292/patients")
+    fetch("http://localhost:9292/customers")
         .then(res => res.json())
         .then(data => {
           setPat(data)
@@ -24,10 +26,27 @@ function Customer({ patt }) {
   }
   
   return (
-    <>
-       { `${patt?.first_name} ${patt?.last_name} - ${patt?.ailment_type || patt?.ailment_name}` }  <span style={{cursor: "pointer"}} onClick={deletePat}>🗑</span>
-    </>
+    <div>
+    <Card>
+       { `${patt?.first_name} 
+       ${patt?.last_name}  ${patt?.service_type || patt?.service_name}` }  <span style={{cursor: "pointer"}}></span>
+       <Button onClick={() => {
+        deletePat(patt.id) }}>Delete</Button>
+          </Card>
+        </div>
+      
   )
 }
 
 export default Customer
+
+
+
+{/* <Card.Body>
+<Card.Title>Name:   {patt?.first_name}</Card.Title>
+<Card.Text>Location:    {patt?.last_name}</Card.Text>
+<Card.Text>Lead Mechanic:   {patt?.service_type || patt?.service_name}</Card.Text>
+<Card.Text> Garage certification number:    {garage.certification_number}</Card.Text>
+</Card.Body>
+<Button onClick={() => {
+      deleteGarage(garage.id) }}>Delete</Button> */}

@@ -1,7 +1,6 @@
 import React from 'react'
-import Johny from '/home/jerre/hotel-management/src/img/1484523.jpg';
 
-
+// import Johny from '/home/jerre/hotel-management/src/img/1484523.jpg';
 const Home = () => {
   return (
     <div>
@@ -12,14 +11,18 @@ const Home = () => {
                          <p>Are you  tired and need some attention to your body  to make you feel relax and be the king or  queen that you are supposed to be </p>
                          <p>Visit Mamboleo for exclusive service</p>
                          <p>We offer:
-                          <li>facials, massages and occasionally other treatments,</li>
-                          <li>Massa</li>
-                          <li></li>
+                          <li>facials</li>
+                          <li>massages</li>
+                          <li>Bathscrub</li>
+                          <li>Sauna</li>
+                          <li>Bath</li>
+                          See our contact us page and give us a call and we will be right there to give you the best services
                           </p>.
+
                          </div>
                  <div className="ilo">
                      <div className="img">
-                         <img src={Johny} alt=" " />
+                         {/* <img src={Johny} alt=" " /> */}
                          {/* <img src='' */}
                      </div>
                     

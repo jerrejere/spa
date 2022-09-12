@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 function useKijazi(){
-    const [loc, setLoc] = useState('')
+    const [loc, setLoc, setServer] = useState('')
     const url = "http://localhost:9292/spaAttendant"
     useEffect(()=>{
       fetch(url)

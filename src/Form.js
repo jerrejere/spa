@@ -5,10 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Form() {
     const [ firstName, setFirstName ] = useState('')
     const [ lastName, setLastName] = useState('')
-    
+    const [gender, setGender]= useState('')
+    const [email, setEmail]= useState('')
     const [ address, setAddress] = useState('')
     const [ telephone, setTelephone ] = useState('')
     const [ town, setTown ] = useState('')
+    const[service, setservice_name  ] = useState('')
+    const [timeanddate,setTime ] =useState('')
    
 
     function handleSubmit(e){
@@ -21,8 +24,12 @@ function Form() {
         body: JSON.stringify({
           first_name: firstName,
           last_name: lastName,
+          gender: gender,
+          email: email,
                     phone: telephone,
           town: town,
+          service: service,
+          timeanddate: timeanddate
         
         })
       })
@@ -31,10 +38,14 @@ function Form() {
         console.log(data)
         setFirstName('')
         setLastName('')
-              setAddress('')
+        setGender('')
+        setEmail('')
+        setAddress('')
         setTelephone('')
         setTown('')
-              })
+        setservice_name ('') 
+         setTime ('')  
+         })
       .catch(err => err.message)
 
       document.querySelector('form').reset()
@@ -62,7 +73,22 @@ function Form() {
               placeholder='Last Name'
               value={ lastName}
               onChange={(e) => setLastName(e.target.value)}
-            ></input>              
+            ></input>  
+             <input
+               type='text'
+               value={ gender }
+               placeholder="gender"
+               className='field'
+               onChange={(e) => setGender(e.target.value)}
+            ></input>  
+             <input
+               type='text'
+               value={ email }
+               placeholder="email"
+               className='field'
+               onChange={(e) => setEmail(e.target.value)}
+            ></input> 
+
             <input
                type='text'
                value={ address }
@@ -86,7 +112,15 @@ function Form() {
                value={ town }
                onChange={(e) => setTown(e.target.value)}
            ></input>
-          
+            <input
+               type='text'
+               required
+               value={ service }
+               placeholder="type of service "
+               className='field'
+               onChange={(e) => setservice_name(e.target.value)}
+               ></input>
+                   
            <br />
            <label className='name'>Select attendant you want to be attained by:</label>
             <select>
@@ -96,9 +130,10 @@ function Form() {
               <option value='nani'>Gay</option>
               <option value='nani'>Lesbian</option>
            </select>
-          <textarea placeholder="Specified time and date" className="field"></textarea>
-          <button className="btn2">Send</button>
-          </form>
+          
+                <button className="btn2">Send</button>
+
+           </form>
         </div>
       </div>
 	  </div>
