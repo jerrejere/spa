@@ -1,3 +1,36 @@
+Jerry Johns owner and builder of the project spa254
+
+The project took about one week to be done but  does not mean that its the end of it 
+
+
+The project was to build to support Africanacity among Africa region.
+
+Its a well but slow coming website that has and would have many features when it is done 
+
+
+The link is below
+
+https://spa254.herokuapp.com/spaAttendant
+
+Thank you
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
