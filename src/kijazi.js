@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 function useKijazi(){
     const [loc, setLoc, setServer] = useState('')
-    const url = "http://localhost:9292/spaAttendant"
+    const url = "https://spabackend254.herokuapp.com/spaAttendant"
     useEffect(()=>{
       fetch(url)
       .then(res => res.json())

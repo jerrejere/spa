@@ -4,7 +4,7 @@ import useKijazi from './kijazi'
 function Loc({ spaAttendants }) {
   const [loc, setLoc] = useKijazi()
   const deleteLoc = ()=>{
-    fetch(`http://localhost:9292/spaAttendants/${spaAttendants?.id}`, {
+    fetch(`https://spabackend254.herokuapp.com//spaAttendants/${spaAttendants?.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type":"application/json"
@@ -14,7 +14,7 @@ function Loc({ spaAttendants }) {
     .then(data => console.log(data))
     .catch(err=>console.log(err))
 
-    fetch("http://localhost:9292/spaAttendants")
+    fetch("https://spabackend254.herokuapp.com/spaAttendants")
       .then(res => res.json())
       .then(data => {
         setLoc(data)

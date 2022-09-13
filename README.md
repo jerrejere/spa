@@ -10,7 +10,7 @@ Its a well but slow coming website that has and would have many features when it
 
 The link is below
 
-https://spa254.herokuapp.com/spaAttendant
+https://spa254.herokuapp.com
 
  How it works
 
