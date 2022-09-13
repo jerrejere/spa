@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 function Customer({ patt }) {
   const [setPat] = useKijaziClient()
   const deletePat = ()=>{
-    fetch(`https://spabackend254.herokuapp.com/customers/${patt?.id}`, {
+    fetch(`https://spabackend254.herokuapp.com/spaAttendants/${patt?.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type":"application/json"
@@ -16,7 +16,7 @@ function Customer({ patt }) {
     .then(data => console.log(data))
     .catch(err=>console.log(err))
 
-    fetch("https://spabackend254.herokuapp.com/customers")
+    fetch("https://spabackend254.herokuapp.com/spaAttendants")
         .then(res => res.json())
         .then(data => {
           setPat(data)
