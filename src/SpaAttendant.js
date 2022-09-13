@@ -5,11 +5,11 @@ import useKijazi from './kijazi'
 import Customer from './Customer'
 
 function SpaAttendant() {
-  const [loc,setLoc,url] = useKijazi()
-  const [pat, setPat] = useKijaziClient()
+  const [loc] = useKijazi()
+  const [pat] = useKijaziClient()
 
   return (
-    <div>
+          <div>
        <h3>Current customer being served:</h3>
         <ol>
             {!pat ? "Hold on ..." : pat?.map((customer)=>{
@@ -21,7 +21,7 @@ function SpaAttendant() {
             })}
         </ol>
     </div>
-  )
+    )
 }
 
 export default SpaAttendant;

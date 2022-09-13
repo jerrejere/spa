@@ -2,7 +2,7 @@ import React from 'react'
 import useKijazi from './kijazi'
 
 function Loc({ spaAttendants }) {
-  const [loc, setLoc] = useKijazi()
+  const [setLoc] = useKijazi()
   const deleteLoc = ()=>{
     fetch(`https://spabackend254.herokuapp.com//spaAttendants/${spaAttendants?.id}`, {
       method: "DELETE",
