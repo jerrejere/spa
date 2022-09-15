@@ -16,7 +16,7 @@ function Form() {
 
     function handleSubmit(e){
       e.preventDefault()
-      fetch("http://localhost:9292/customer", {
+      fetch("https://spabackend254.herokuapp.com/customers/1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
