@@ -12,7 +12,7 @@ const Home = () => {
                          <p>Visit Mamboleo for exclusive service</p>
                          <p>We offer:
                             <Card>
-                          <ol><strong>facials</strong>str</ol>
+                          <ol><strong>facials</strong></ol>
                           <ol>massages</ol>
                           <ol>Bathscrub</ol>
                           <ol>Sauna</ol>
